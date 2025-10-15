@@ -29,4 +29,6 @@ export interface HighlightData {
   duration?: number;
   views?: number;
   createdAt?: Date;
+  eventImageUrl?: string; // badge or event image
+  marketHashName?: string; // market_hash_name from API
 }

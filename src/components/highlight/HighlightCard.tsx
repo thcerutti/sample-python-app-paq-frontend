@@ -13,18 +13,16 @@ export function HighlightCard({ highlight, onPlay }: HighlightCardProps) {
   const handlePlay = () => onPlay?.(highlight);
 
   return (
-    <div className="highlight-page">
-      <div className="highlight-card">
-        <div className="highlight-grid">
-          <VideoThumbnail
-            thumbnailUrl={highlight.thumbnailUrl}
-            title={highlight.title}
-            map={highlight.map}
-            videoUrl={highlight.videoUrl}
-            onPlay={handlePlay}
-          />
-          <HighlightDetails highlight={highlight} />
-        </div>
+    <div className="highlight-card">
+      <div className="highlight-grid">
+        <VideoThumbnail
+          thumbnailUrl={highlight.thumbnailUrl}
+          title={highlight.title}
+          map={highlight.map}
+          videoUrl={highlight.videoUrl}
+          onPlay={handlePlay}
+        />
+        <HighlightDetails highlight={highlight} />
       </div>
     </div>
   );

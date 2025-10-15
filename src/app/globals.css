@@ -130,6 +130,7 @@ button { cursor: pointer; border: 0; background: transparent; }
 
 /* Highlight details */
 .highlight-details { padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+.highlight-title-row { display: flex; align-items: center; gap: 8px; }
 .highlight-title { font-size: 1.25rem; font-weight: 700; color: #0d151c; }
 .highlight-description { margin-top: 4px; font-size: 0.9rem; color: var(--text-secondary-light); }
 
@@ -151,6 +152,9 @@ button { cursor: pointer; border: 0; background: transparent; }
 
 .tournament-info { display: flex; align-items: center; gap: 16px; }
 .tournament-item { display: flex; align-items: center; gap: 8px; }
+.tournament-badge { width: 24px; height: 24px; object-fit: contain; }
+.highlight-market-hash { font-size: 0.8rem; color: var(--text-secondary-light); margin-top: 4px; }
+@media (prefers-color-scheme: dark) { .highlight-market-hash { color: #a0b3c6; } }
 
 /* Matchup */
 .matchup-wrapper { padding-top: 8px; }
@@ -169,3 +173,12 @@ button { cursor: pointer; border: 0; background: transparent; }
   .matchup-box { background: #0f1a23; color: #fff; }
 }
 .matchup-sep { color: #068cf9; font-size: 1.125rem; }
+
+/* List styles for multiple cards */
+.list-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+.list-item { margin-bottom: 24px; }
+.list-item:last-child { margin-bottom: 0; }
