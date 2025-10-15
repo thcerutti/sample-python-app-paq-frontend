@@ -30,7 +30,10 @@ export default function Home() {
     async function load() {
       try {
         setLoading(true);
-        const res = await fetch("https://sample-python-app-paq.vercel.app/cs/jogadas", { cache: "no-store" });
+        const res = await fetch(
+          "https://sample-python-app-paq.vercel.app/cs/jogadas",
+          { cache: "no-store" }
+        );
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data: { jogadas: ApiJogada[] } = await res.json();
         const mapped: HighlightData[] = (data.jogadas || []).map((j) => ({
@@ -61,7 +64,9 @@ export default function Home() {
       }
     }
     load();
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   if (loading) return <div className="list-container">Carregando jogadas…</div>;
