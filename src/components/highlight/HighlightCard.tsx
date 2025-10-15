@@ -10,14 +10,7 @@ interface HighlightCardProps {
 }
 
 export function HighlightCard({ highlight, onPlay }: HighlightCardProps) {
-  const handlePlay = () => {
-    if (onPlay) {
-      onPlay(highlight);
-    } else {
-      // Default behavior: open video in new tab or handle as needed
-      window.open(highlight.videoUrl, '_blank');
-    }
-  };
+  const handlePlay = () => onPlay?.(highlight);
 
   return (
     <div className="highlight-page">
@@ -27,6 +20,7 @@ export function HighlightCard({ highlight, onPlay }: HighlightCardProps) {
             thumbnailUrl={highlight.thumbnailUrl}
             title={highlight.title}
             map={highlight.map}
+            videoUrl={highlight.videoUrl}
             onPlay={handlePlay}
           />
           <HighlightDetails highlight={highlight} />

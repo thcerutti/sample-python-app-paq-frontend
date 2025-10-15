@@ -9,7 +9,6 @@ export default function Home() {
     console.log("Playing video:", highlight.title);
     // Aqui você pode implementar a lógica para reproduzir o vídeo
     // Por exemplo, abrir um modal de vídeo, navegar para uma página de vídeo, etc.
-    alert(`Reproduzindo: ${highlight.title}`);
   };
 
   return (
